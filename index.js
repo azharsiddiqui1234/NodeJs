@@ -1,5 +1,20 @@
-// const fs = require('fs')
-// fs.writeFileSync("hello.pdf","Hello text")
+const http = require("http");
+// const server = http.createServer((req, resp) => {
+//   resp.writeHead(200, { "content-Type": "application/json" });
+//   resp.end(
+//     JSON.stringify({
+//       data: "Hello World",
+//     })
+//   );
+// });
 
-const file = require('fs').writeFileSync;
-file("abc.text","Hello docs")
+// server.listen(4500);
+
+
+
+const server = http.createServer((req, resp) => {
+  resp.write("hello Azhar How Are you");
+  resp.end();
+});
+server.listen(4500);
+
